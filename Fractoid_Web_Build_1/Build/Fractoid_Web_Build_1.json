@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "Fractoid_Web_Build_1.data.unityweb",
+"asmCodeUrl": "Fractoid_Web_Build_1.asm.code.unityweb",
+"asmMemoryUrl": "Fractoid_Web_Build_1.asm.memory.unityweb",
+"asmFrameworkUrl": "Fractoid_Web_Build_1.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}

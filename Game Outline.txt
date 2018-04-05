@@ -1,0 +1,257 @@
+Game Outline
+
+General
+	-A defense game centered around surviving successive waves of persistent assorted enemy units
+Features
+	-Attribute classes
+		-Range class
+			-Melee
+			-Short
+			-Normal
+			-High
+			-Very high
+		-Health class
+			-Very low
+			-Low
+			-Normal
+			-High
+			-Very high
+			-Extremely high
+		-Speed class
+			-Very slow
+			-Slow
+			-Normal
+			-Fast
+			-Very fast
+		-Damage class
+			-Low
+			-Normal
+			-High
+			-Very high
+	-Numerical
+		-Currency
+			-Currency earned by killing enemies
+			-Currency used to purchase allies and constructs
+			-More currency awarded to player kills
+		-Points
+			-Points earned by killing enemies
+			-Increasing point multiplier for player kills within a time frame
+	-PlayEnt
+		-General
+			-Slow movement
+			-Fires directional attacks based on an adjustable aim
+			-0,0, 100
+			-30 px feathering
+	-Constructs
+		-General
+			-Walls are built between waves
+			-Walls can be repaired at any time
+			-Traps can be placed at any time
+		-Wall
+			-Upgradable, repairable wall that obstructs enemies
+		-Skypad
+			-Natural indestructable outlooks
+		-Turret
+			-Upgradable, repairable sentry that attacks enemies
+		-Damage buff tower
+			-Upgradable, repairable tower that provides a damage buff at a health cost over time
+		-Health buff tower
+			-Upgradable, repairable tower that provides heal over time
+		-Cloak reveal trap
+			-Limited use proximinty-triggered trap that reveals cloaked clandestine
+		-Explosive trap
+			-Single use proximity-triggered explosive trap with very high splash damage
+		-Precision trap
+			-Single use proximity-triggered precision with extreme pinpoint damage
+	-Allies
+		-General
+			-Allies are friendly mobile units that assist the player
+			-Positions can be assigned by the player
+		-Loyal
+			-High range
+			-Very high health
+			-Slow speed
+			-Normal ranged damage
+			-A loyal ally providing standard high-ranged damage
+			-185, 80, 100
+		-Resolute
+			-Normal range
+			-Very high health
+			-Slow speed
+			-High ranged damage
+			-A resolute ally providing high damage at a moderate range
+			-300, 80, 100
+		-Fervid
+			-Normal range
+			-Very high health
+			-Slow speed
+			-High ranged splash damage
+			-A fervid ally providing high explosive damage
+			-55, 80, 100
+	-Enemies
+		-General
+			-Enemies move directly towards PlayEnt
+			-Enemies will attack any structures/allies they encounter
+		-Standard
+			-Short range
+			-Normal health
+			-Normal speed
+			-Normal ranged damage
+			-A standard, run-of-the-mill, template unit
+		-Volatile
+			-Melee range
+			-Low health
+			-Very fast speed
+			-High splash damage
+			-A weak unit with a single self-destructive splash attack
+			-0,80,60
+		-Dense
+			-Melee range
+			-Very high health
+			-Slow speed
+			-Normal melee damage
+			-A slow, armored brawler unit
+		-Scoped
+			-Very high range
+			-Low health
+			-Normal speed
+			-High ranged damage
+			-A weak, supportive sniper unit
+		-Supportive
+			-Normal range
+			-Normal health
+			-Slow speed
+			-Low ranged damage
+			-A healer unit that provides supportive buffs
+		-Clandestine
+			-Melee range, normal range
+			-Normal health
+			-Normal speed
+			-Very high melee damage, high ranged damage
+			-A elusive stealth unit that is hidden until combat
+		-Vengeful
+			-High range
+			-High health
+			-Normal speed
+			-High damage
+			-A tactical unit that concentrates on combative defenses and allies
+		-Impervious
+			-Melee range
+			-Extremely high health
+			-Very slow speed
+			-Very high melee damage
+			-A trundling juggernaut unit that decimates everything
+		-Expendable
+			-Short range
+			-Very low health
+			-Fast speed
+			-Low ranged damage
+			-A distracting low-damaging unit problematic in large numbers
+		-Metaphysical
+			-Normal range
+			-Very high health
+			-Fast speed
+			-High damage
+			-A leviating unit only susceptible to player attacks
+-Graphical
+	-General
+		-Back glow achieved by inverting blur selection with 15 px feathering
+		-Orb glow size is 24 px with 65 hardness
+		-Selected objects have increased solid glow
+	-Constructs
+		-Walls
+			-Shape affected by neighboring walls
+		-Buff towers
+			-Periodic solid pulses
+			-Passive spin
+	-Allies/Player
+		-Ally and player spirals spin while attacking
+		-Bullets emerge from ally center
+		-Pulsing glow
+		-Periodic soild pulses trail movement
+		-Bullets explode on contact
+		-Range aura shown when selected
+	-Enemies
+		-General
+			-Constant pulsing glow underlay, engine
+			-Periodic solid pulses trail movement, engine
+			-Darkens on incurring damage, engine
+			-Death animination on death, animinated
+			-Bullets explode on contact
+		-Standard
+			-Bullets emerge from center down a
+			-25,80,100
+		-Volatile
+			-Passive spin
+			-Ring pulse on denonation
+			-0,80,100
+		-Dense
+			-Passive spin
+			-Ring pulse on melee attack
+			-Spin on melee attack
+			-20 px feathering
+			-235,80,100
+		-Scoped
+			-Scope extend before attack
+			-Scope retracts after attack
+			-Bullets emerge from center down aim
+			-275,80,100
+		-Supportive
+			-Passive spin
+			-Moves towards fellow enemies
+			-Attempts to avoid combat/constructs
+			-Spins during large perioidic heal
+			-Large solid pulse during heal
+			-140,80,100
+		-Clandestine
+			-Invisible spawn
+			-Turns visible after melee attack, or after receiving attack
+			-After reveal, will attempt to use ranged attack if further than critical distance
+			-Bullets emerge from center down aim
+			-Ring pulse on melee attack
+			-0,0,50
+		-Vengeful
+			-Bullets emerge from center down aim
+			-Does not attack non-combat structures until small critical distance
+			-Directly attacks combat structures and allies
+			-80,80,100
+		-Impervious
+			-Takes additional damage if attacked from behind
+			-Ring pulse on melee attack
+			-Visible health bar
+			-210,80,100
+			-30 px feathering
+		-Expendable
+			-Bullets emerge from center down aim
+			-340,80,100
+		-Metaphysical
+			-Ignores walls/allies
+			-Passive spin
+			-Spin on ranged attack
+			-0,0,100
+			-30 px feathering
+Advanced Behavior
+	-Notes
+		-Intelligent spawning
+		-Tactical retreat for health
+		-Strafing motion
+		-Focused attacks
+List
+	-Range aura
+	-Health bars
+	-Crosshair
+	-Selection indicator
+	-HUD build icons
+	-HUD currency
+	-Color bullets
+	-Melee attack pulses
+	-Supportive heal pulses
+	-Tower pulses
+	-Movement solid pulses trail
+	-Death animations
+	-Start screen
+	-Trap explosions
+	-Turret attacks
+	-Indestructible natural wall*
+	-Skypads*
+	-Wall upgrade/damage stages*

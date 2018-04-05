@@ -1,0 +1,40 @@
+-General
+-Player
+	-Operations
+		-Attack
+		-Look towards
+		-Health tower effect
+		-Damage tower effect
+		-Solid trail pulses
+		-Back glow pulse
+		-Passive spin
+		-Attack spin
+		-Darken on damage
+	-Variables
+		-Speed
+		-Fire rate timer
+		-Health
+		-Damage buff boolean
+		-Attack boolean
+		-Passive spin timer
+		-Attack spin timer
+	-Structure
+		-Movement
+			-WASD keys movement
+		-Aim
+			-Look towards mouse function
+		-Attack
+			-Spawn tagged ally projectile towards crosshair
+			-Increased accelerated spin with cap
+			-Attack prevented if timer has not reached zero
+			-Checks for buff variable
+		-Tower effects
+			-Health tower provides heal over time within range
+			-Damage tower spawns damage tagged bullets
+		-Periodic graphics
+			-Pulse glow with varying tranparency
+			-Solid trail pulses spawn and fade
+			-Passive spin
+		-Damage
+			-Deduct health based on tagged bullet/melee
+			-Darken on collision with enemy tagged bullet
